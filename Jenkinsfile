@@ -14,7 +14,16 @@ pipeline {
         git 'https://github.com/Arbiel31/beprueba.git'
       }
     }
-
+	
+	stage('Building jar'){
+      steps {
+        script {
+          bat "gradle build"
+        }
+      }
+    }
+	
+	
     stage('Build image') {
       steps{
         script {
