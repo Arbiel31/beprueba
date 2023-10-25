@@ -42,7 +42,7 @@ pipeline {
           bat "kubectl delete -n default deployment beprueba"
           bat "kubectl create deployment beprueba --image=arbiel/beprueba:latest"
           bat "kubectl delete -n default service beprueba"
-          bat "kubectl expose deployment beprueba --type=LoadBalancer --port=4200"
+          bat "kubectl expose deployment beprueba --type=LoadBalancer --port=8081"
         }
       }
     }
